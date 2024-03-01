@@ -9,7 +9,7 @@
 .data
         UM     db 9,9,9,9,9, "UNIVERSITY OF MINDANAO", 10, 0
         CollegeDepartment db 9,9,9, "     DEPARTMENT: ","COLLEGE OF COMPUTING EDUCATION", 10, 0
-        Program   db 9,9,9,9,9, "    PROGRAM: ","Bachelor of Science in Information Technology", 10, 0
+        Program   db 9,9, "    PROGRAM: ","Bachelor of Science in Information Technology", 10, 0
 		Divider db 9, "-----------------------------------------------------------------------------------------", 10, 0
 
         ; 1st Year / 1st Sem 
@@ -145,6 +145,7 @@ begin:
         invoke ClearScreen
         invoke StdOut, addr UM
         invoke StdOut, addr CollegeDepartment
+        invoke StdOut, addr Program
         invoke StdOut, addr Divider
 		invoke StdOut, addr Divider
 
@@ -226,6 +227,7 @@ firstyear1:
         invoke ClearScreen
         invoke StdOut, addr UM
 	invoke StdOut, addr CollegeDepartment
+         invoke StdOut, addr Program
 	invoke StdOut, addr Divider
 	invoke StdOut, addr Divider
 	invoke StdOut, addr Name_Declared
@@ -273,6 +275,7 @@ secondyear1:
         invoke ClearScreen
         invoke StdOut, addr UM
 	invoke StdOut, addr CollegeDepartment
+         invoke StdOut, addr Program
 	invoke StdOut, addr Divider
 	invoke StdOut, addr Divider
 	invoke StdOut, addr Name_Declared
@@ -403,6 +406,7 @@ print22:
 		invoke ClearScreen
 		invoke StdOut, addr UM
 		invoke StdOut, addr CollegeDepartment
+                invoke StdOut, addr Program
 		invoke StdOut, addr Divider
 		invoke StdOut, addr Divider
 		invoke StdOut, addr Name_Declared
