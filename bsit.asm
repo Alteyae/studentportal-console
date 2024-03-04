@@ -113,7 +113,7 @@
         E71 DWORD ? ;41
         R7 DWORD ? ;42
               
-        ;T8      db 10, 9, "Select a course [1-7] or enter any key to exit: ", 
+        selectCourse_prompt    db 10, 9, "Select a course with their corresponding letter or any key to enroll", 10, 0
 
 .data?
         B9 db 50 dup (?)
@@ -263,6 +263,7 @@ firstyear1:
         jmp select1
 
 select1:
+        invoke StdOut, addr selectCourse_prompt 
         invoke StdIn, addr E9, 10
         .if E9 == "A"
                 add eax, 3
@@ -496,6 +497,7 @@ firstyear2:
         jmp select2
 
 select2:
+        invoke StdOut, addr selectCourse_prompt 
         invoke StdIn, addr E9, 10
         .if E9 == "I"
                 add eax, 3
@@ -646,6 +648,7 @@ secondyear1:
         jmp select21
 
 select21:
+        invoke StdOut, addr selectCourse_prompt 
         invoke StdIn, addr E9, 10
         .if E9 == "A"
                 add eax, 3
@@ -796,6 +799,7 @@ secondyear2:
         jmp select22
 
 select22:
+        invoke StdOut, addr selectCourse_prompt 
         invoke StdIn, addr E9, 10
         .if E9 == "I"
                 add eax, 3
