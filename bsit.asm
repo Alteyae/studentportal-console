@@ -42,26 +42,26 @@
         ; 2nd Year / 1st Sem 
         secondYear1     db 10, 10, 9, "2nd Year | 1st Sem", 10, 0
         S21    db 9, "NO.", 9, "Title", 9,9,   "Unit",9,9,   "Description", 10, 0
-        it5     db 9, "[17]", 9, "IT 5", 9,9,    "3.0", 9,9,   "IT ELECTIVE 2", 10, 0
-        cce104     db 9, "[18]", 9, "CCE 104", 9,9,  "3.0", 9,9,   "INFORMATION MANAGEMENT", 10, 0
-        it3     db 9, "[19]", 9, "IT 3", 9,9,  "3.0", 9,9,   "NETWORKING 1", 10, 0
-        it4     db 9, "[20]", 9, "IT 4", 9,9, "3.0", 9,9,   "CALCULUS 1", 10, 0
-        gpe3     db 9, "[21]", 9, "GPE 3", 9,9,   "2.0", 9,9,   "PHYSICAL ACITIVITIES TOWARDS HEALTH AND FITNESS", 10, 0
-        ge3    db 9, "[22]", 9, "GE 3", 9,9, "3.0", 9,9,   "THE CONTEMPORARY WORLD", 10, 0
-        cce105     db 9, "[23]", 9, "CCE 105", 9,9, "3.0", 9,9,   "DATA STRUCTURES AND ALGORITHMS", 10, 0
-        ge20     db 9, "[24]", 9, "GE 20", 9,9, "3.0", 9,9,   "READING VISUAL ARTS", 10, 0 
+        it5     db 9, "[A]", 9, "IT 5", 9,9,    "3.0", 9,9,   "IT ELECTIVE 2", 10, 0
+        cce104     db 9, "[B]", 9, "CCE 104", 9,9,  "3.0", 9,9,   "INFORMATION MANAGEMENT", 10, 0
+        it3     db 9, "[C]", 9, "IT 3", 9,9,  "3.0", 9,9,   "NETWORKING 1", 10, 0
+        it4     db 9, "[D]", 9, "IT 4", 9,9, "3.0", 9,9,   "CALCULUS 1", 10, 0
+        gpe3     db 9, "[E]", 9, "GPE 3", 9,9,   "2.0", 9,9,   "PHYSICAL ACITIVITIES TOWARDS HEALTH AND FITNESS", 10, 0
+        ge3    db 9, "[F]", 9, "GE 3", 9,9, "3.0", 9,9,   "THE CONTEMPORARY WORLD", 10, 0
+        cce105     db 9, "[G]", 9, "CCE 105", 9,9, "3.0", 9,9,   "DATA STRUCTURES AND ALGORITHMS", 10, 0
+        ge20     db 9, "[H]", 9, "GE 20", 9,9, "3.0", 9,9,   "READING VISUAL ARTS", 10, 0 
 		E2111	db 9, "-----------------------------------------------------------------------------------------", 0
 
         ; 2nd Year / 2nd Sem 
         secondYear2     db 10, 10, 9, "2nd Year | 2nd Sem", 10, 0
         s22    db 9, "NO.", 9, "Title", 9,9,   "Unit",9,9,   "Description", 10, 0
-        it6     db 9, "[25]", 9, "IT 6", 9,9, "3.0", 9,9,   "FUNDAMENTALS OF DATABASE SYSTEMS", 10, 0
-        it8     db 9, "[26]", 9, "IT 8", 9,9,  "3.0", 9,9,   "CALCULUS 2", 10, 0
-        it10     db 9, "[27]", 9, "IT 10", 9,9,  "3.0", 9,9,   "IT ELECTIVE 3", 10, 0
-        it26     db 9, "[28]", 9, "IT 26", 9,9,    "6.0", 9,9,   "PROFESSIONAL TRACK FOR IT 3", 10, 0
-        mth103     db 9, "[29]", 9, "MTH 103", 9,9,   "3.0", 9,9,   "PROBABILITIES AND STATISTICS", 10, 0
-        gpe4    db 9, "[31]", 9, "GPE 4", 9,9, "2.0", 9,9,   "PHYSICAL ACTIVITIES TOWARDS HEALTH AND FITNESS", 10, 0
-        it7     db 9, "[32]", 9, "IT 7", 9,9, "3.0", 9,9,   "INTRODUCTION TO HUMAN COMPUTER INTERACTION", 10, 0
+        it6     db 9, "[I]", 9, "IT 6", 9,9, "3.0", 9,9,   "FUNDAMENTALS OF DATABASE SYSTEMS", 10, 0
+        it8     db 9, "[J]", 9, "IT 8", 9,9,  "3.0", 9,9,   "CALCULUS 2", 10, 0
+        it10     db 9, "[K]", 9, "IT 10", 9,9,  "3.0", 9,9,   "IT ELECTIVE 3", 10, 0
+        it26     db 9, "[L]", 9, "IT 26", 9,9,    "6.0", 9,9,   "PROFESSIONAL TRACK FOR IT 3", 10, 0
+        mth103     db 9, "[M]", 9, "MTH 103", 9,9,   "3.0", 9,9,   "PROBABILITIES AND STATISTICS", 10, 0
+        gpe4    db 9, "[N]", 9, "GPE 4", 9,9, "2.0", 9,9,   "PHYSICAL ACTIVITIES TOWARDS HEALTH AND FITNESS", 10, 0
+        it7     db 9, "[O]", 9, "IT 7", 9,9, "3.0", 9,9,   "INTRODUCTION TO HUMAN COMPUTER INTERACTION", 10, 0
 		A222	db 9, "-----------------------------------------------------------------------------------------", 0
         
 
@@ -236,13 +236,15 @@ choices:
                 jmp firstyear2
         .elseif B9 == '3'
                 jmp secondyear1
+        .elseif B9 == '4'
+                jmp secondyear2
         .endif
 
 firstyear1:
         invoke ClearScreen
         invoke StdOut, addr UM
 	invoke StdOut, addr CollegeDepartment
-         invoke StdOut, addr Program
+        invoke StdOut, addr Program
 	invoke StdOut, addr Divider
 	invoke StdOut, addr Divider
 	invoke StdOut, addr Name_Declared
@@ -440,6 +442,8 @@ print1st:
 		invoke StdOut, addr Divider
 		invoke StdOut, addr Name_Declared
 		invoke StdOut, addr Name_Input
+                invoke StdOut, addr ID_Declared
+                invoke StdOut, addr ID_Input
 		invoke StdOut, addr Sub_En
 		
 		;copy for Divider top
@@ -592,6 +596,8 @@ print1st2:
 		invoke StdOut, addr Divider
 		invoke StdOut, addr Name_Declared
 		invoke StdOut, addr Name_Input
+                invoke StdOut, addr ID_Declared
+                invoke StdOut, addr ID_Input
 		invoke StdOut, addr Sub_En
 		
 		;copy for Divider top
@@ -626,6 +632,157 @@ secondyear1:
         invoke StdOut, addr ID_Declared
         invoke StdOut, addr ID_Input
 
+        invoke StdOut, addr secondYear1
+        invoke StdOut, addr S21
+        invoke StdOut, addr it5
+        invoke StdOut, addr cce104
+        invoke StdOut, addr it3
+        invoke StdOut, addr it4
+        invoke StdOut, addr gpe3
+        invoke StdOut, addr ge3
+        invoke StdOut, addr cce105
+        invoke StdOut, addr ge20
+        
+        jmp select21
+
+select21:
+        invoke StdIn, addr E9, 10
+        .if E9 == "A"
+                add eax, 3
+                sub eax, 1
+                add A7, eax 
+                invoke StdOut, addr it5
+				mov esi, OFFSET it5
+                mov edi, OFFSET print1
+                mov ecx, SIZEOF it5
+                cld
+                rep movsb
+        .elseif E9 == "B"
+                add eax, 3
+                sub eax, 1
+                add A7, eax
+                invoke StdOut, addr cce104
+				mov esi, OFFSET cce104
+                mov edi, OFFSET print2
+                mov ecx, SIZEOF cce104
+                cld
+                rep movsb
+        .elseif E9 == "C"
+                add eax, 3
+                sub eax, 1
+                add A7, eax
+                invoke StdOut, addr it3
+				mov esi, OFFSET it3
+                mov edi, OFFSET print3
+                mov ecx, SIZEOF it3
+                cld
+                rep movsb
+        .elseif E9 == "D"
+                add eax, 3
+                sub eax, 1
+                add A7, eax
+                invoke StdOut, addr it4
+				mov esi, OFFSET it4
+                mov edi, OFFSET print4
+                mov ecx, SIZEOF it4
+                cld
+                rep movsb
+        .elseif E9 == "E"
+                add eax, 2
+                sub eax, 1
+                add A7, eax
+                invoke StdOut, addr gpe3
+				mov esi, OFFSET gpe3
+                mov edi, OFFSET print5
+                mov ecx, SIZEOF gpe3
+                cld
+                rep movsb
+        .elseif E9 == "F"
+                add eax, 3
+                sub eax, 1
+                add A7, eax
+                invoke StdOut, addr ge3
+				mov esi, OFFSET ge3
+                mov edi, OFFSET print6
+                mov ecx, SIZEOF ge3
+                cld
+                rep movsb
+        .elseif E9 == "G"
+                add eax, 3
+                sub eax, 1
+                add A7, eax
+                invoke StdOut, addr cce105
+				mov esi, OFFSET cce105
+                mov edi, OFFSET print7
+                mov ecx, SIZEOF cce105
+                cld
+                rep movsb
+         .elseif E9 == "H"
+                add eax, 3
+                sub eax, 1
+                add A7, eax
+                invoke StdOut, addr ge20
+				mov esi, OFFSET ge20
+                mov edi, OFFSET print8
+                mov ecx, SIZEOF ge20
+                cld
+                rep movsb
+        .else
+        jmp total2nd
+        .endif
+        jmp select21
+
+total2nd:
+        mov eax, A7
+        invoke dwtoa, eax, addr E9
+        jmp print2nd
+
+print2nd:
+		invoke ClearScreen
+		invoke StdOut, addr UM
+		invoke StdOut, addr CollegeDepartment
+                invoke StdOut, addr Program
+		invoke StdOut, addr Divider
+		invoke StdOut, addr Divider
+		invoke StdOut, addr Name_Declared
+		invoke StdOut, addr Name_Input
+		invoke StdOut, addr Sub_En
+		
+		;copy for Divider top
+		invoke StdOut, addr secondYear2
+		invoke StdOut, addr s22
+		;copy for Divider bottom
+		
+		invoke StdOut, addr print1
+		invoke StdOut, addr print2
+		invoke StdOut, addr print3
+		invoke StdOut, addr print4
+		invoke StdOut, addr print5
+		invoke StdOut, addr print6
+		invoke StdOut, addr print7
+		invoke StdOut, addr print8
+		
+		;total units
+		invoke StdOut, addr totalUnits
+		;for the if condition
+		invoke StdOut, addr E9
+		
+		jmp exit
+
+
+;2ND YEAR SND SEM
+secondyear2:
+        invoke ClearScreen
+        invoke StdOut, addr UM
+	invoke StdOut, addr CollegeDepartment
+        invoke StdOut, addr Program
+	invoke StdOut, addr Divider
+	invoke StdOut, addr Divider
+	invoke StdOut, addr Name_Declared
+	invoke StdOut, addr Name_Input
+        invoke StdOut, addr ID_Declared
+        invoke StdOut, addr ID_Input
+
         invoke StdOut, addr secondYear2
         invoke StdOut, addr s22
         invoke StdOut, addr it6
@@ -640,7 +797,7 @@ secondyear1:
 
 select22:
         invoke StdIn, addr E9, 10
-        .if E9 == "1"
+        .if E9 == "I"
                 add eax, 3
                 sub eax, 1
                 add A7, eax 
@@ -650,7 +807,7 @@ select22:
                 mov ecx, SIZEOF it6
                 cld
                 rep movsb
-        .elseif E9 == "2"
+        .elseif E9 == "J"
                 add eax, 3
                 sub eax, 1
                 add A7, eax
@@ -660,7 +817,7 @@ select22:
                 mov ecx, SIZEOF it8
                 cld
                 rep movsb
-        .elseif E9 == "3"
+        .elseif E9 == "K"
                 add eax, 3
                 sub eax, 1
                 add A7, eax
@@ -670,7 +827,7 @@ select22:
                 mov ecx, SIZEOF it10
                 cld
                 rep movsb
-        .elseif E9 == "4"
+        .elseif E9 == "L"
                 add eax, 6
                 sub eax, 1
                 add A7, eax
@@ -680,7 +837,7 @@ select22:
                 mov ecx, SIZEOF it26
                 cld
                 rep movsb
-        .elseif E9 == "5"
+        .elseif E9 == "M"
                 add eax, 3
                 sub eax, 1
                 add A7, eax
@@ -690,7 +847,7 @@ select22:
                 mov ecx, SIZEOF mth103
                 cld
                 rep movsb
-        .elseif E9 == "6"
+        .elseif E9 == "N"
                 add eax, 2
                 sub eax, 1
                 add A7, eax
@@ -700,7 +857,7 @@ select22:
                 mov ecx, SIZEOF gpe4
                 cld
                 rep movsb
-        .elseif E9 == "7"
+        .elseif E9 == "O"
                 add eax, 3
                 sub eax, 1
                 add A7, eax
@@ -711,15 +868,16 @@ select22:
                 cld
                 rep movsb
         .else
-        jmp total2nd
+        jmp total2nd2
         .endif
         jmp select22
 
-total2nd:
+total2nd2:
         mov eax, A7
         invoke dwtoa, eax, addr E9
-        jmp print2nd
-print2nd:
+        jmp print2nd2
+
+print2nd2:
 		invoke ClearScreen
 		invoke StdOut, addr UM
 		invoke StdOut, addr CollegeDepartment
