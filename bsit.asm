@@ -71,43 +71,44 @@
         it11     db 9, "[A]", 9, "IT 11", 9,9, "3.0", 9,9,   "NETWORKING 2", 10, 0
         ge9     db 9, "[B]", 9, "GE 9", 9,9,  "3.0", 9,9,   "ETHICS (Disciplinal)", 10, 0
         ge8     db 9, "[C]", 9, "GE 8", 9,9,  "3.0", 9,9,   "READING IN PHILIPPINE HISTORY", 10, 0
-        phys101     db 9, "[D]", 9, "PHYS 101", 9,9,    "4.0", 9,9,   "COLLEGE PHYSICS 1", 10, 0
+        phys101  db 9, "[D]", 9, "PHYS 101" ,9, "4.0", 9,9,   "COLLEGE PHYSICS 1", 10, 0
         it12     db 9, "[E]", 9, "IT 12", 9,9,   "3.0", 9,9,   "SYSTEM INTEGRATION & ARCHITECTURE", 10, 0
         it14    db 9, "[F]", 9, "IT 14", 9,9, "3.0", 9,9,   "PROFESSIONAL TRACK FOR IT 5", 10, 0
         ge11     db 9, "[G]", 9, "GE 11", 9,9, "3.0", 9,9,   "THE ENTREPRENEURIAL MIND", 10, 0
-        it13     db 9, "[G]", 9, "IT 13", 9,9, "3.0", 9,9,   "PROFESSIONAL TRACK FOR IT 4", 10, 0
+        it13     db 9, "[H]", 9, "IT 13", 9,9, "3.0", 9,9,   "PROFESSIONAL TRACK FOR IT 4", 10, 0
 
         ; 3rd Year / 2nd Sem
         thirdYear2     db 10, 10, 9, "3rd Year | 2nd Sem", 10, 0
         s24    db 9, "NO.", 9, "Title", 9,9,   "Unit",9,9,   "Description", 10, 0
-        it16     db 9, "[H]", 9, "IT 16", 9,9, "3.0", 9,9,   "INFORMATION ASSURANCE AND SECURITY 1", 10, 0
-        uge2     db 9, "[I]", 9, "UGE 2", 9,9,  "3.0", 9,9,   "TECHNICAL WRITING IN THE DISCIPLINE", 10, 0
-        it15     db 9, "[J]", 9, "IT 15", 9,9,  "3.0", 9,9,   "INTEGRATIVE PROGRAMMING AND TECHNOLOGIES", 10, 0
-        it18     db 9, "[K]", 9, "IT 18", 9,9,    "3.0", 9,9,   "QUANTITATIVE METHODS", 10, 0
-        it19     db 9, "[L]", 9, "IT 19", 9,9,   "3.0", 9,9,   "TECHNOPRENEURSHIP", 10, 0
-        it20    db 9, "[M]", 9, "IT 20", 9,9, "3.0", 9,9,   "PROFESSIONAL TRACK FOR IT 6", 10, 0
-        phys102     db 9, "[N]", 9, "PHYS 102", 9,9, "4.0", 9,9,   "COLLEGE PHYSICS 2", 10, 0
-        ge7     db 9, "[N]", 9, "GE 7", 9,9, "3.0", 9,9,   "ART APPRECIATION", 10, 0
+        it16     db 9, "[I]", 9, "IT 16", 9,9, "3.0", 9,9,   "INFORMATION ASSURANCE AND SECURITY 1", 10, 0
+        uge2     db 9, "[J]", 9, "UGE 2", 9,9,  "3.0", 9,9,   "TECHNICAL WRITING IN THE DISCIPLINE", 10, 0
+        it15     db 9, "[K]", 9, "IT 15", 9,9,  "3.0", 9,9,   "INTEGRATIVE PROGRAMMING AND TECHNOLOGIES", 10, 0
+        it18     db 9, "[L]", 9, "IT 18", 9,9,    "3.0", 9,9,   "QUANTITATIVE METHODS", 10, 0
+        it19     db 9, "[M]", 9, "IT 19", 9,9,   "3.0", 9,9,   "TECHNOPRENEURSHIP", 10, 0
+        it20    db 9, "[N]", 9, "IT 20", 9,9, "3.0", 9,9,   "PROFESSIONAL TRACK FOR IT 6", 10, 0
+        phys102  db 9, "[O]", 9, "PHYS 102" ,9, "4.0", 9,9,   "COLLEGE PHYSICS 2", 10, 0
+        ge7     db 9, "[P]", 9, "GE 7", 9,9, "3.0", 9,9,   "ART APPRECIATION", 10, 0
+
 
         ; 3rd Year / Summer
         thirdYear3     db 10, 10, 9, "3rd Year | Summer", 10, 0
         s25    db 9, "NO.", 9, "Title", 9,9,   "Unit",9,9,   "Description", 10, 0
-        it22     db 9, "[H]", 9, "IT 22", 9,9, "3.0", 9,9,   "CAPSTONE PROJECT 1", 10, 0
-        it21     db 9, "[I]", 9, "IT 21", 9,9,  "3.0", 9,9,   "INFORMATION ASSURANCE AND SECURITY 2", 10, 0
+        it22     db 9, "[Q]", 9, "IT 22", 9,9, "3.0", 9,9,   "CAPSTONE PROJECT 1", 10, 0
+        it21     db 9, "[R]", 9, "IT 21", 9,9,  "3.0", 9,9,   "INFORMATION ASSURANCE AND SECURITY 2", 10, 0
         
         ; 4th Year / 1st Sem
         fourthyear1     db 10, 10, 9, "4th Year | 1st Sem", 10, 0
         s26    db 9, "NO.", 9, "Title", 9,9,   "Unit",9,9,   "Description", 10, 0
-        cce106     db 9, "[H]", 9, "CCE 106", 9,9, "3.0", 9,9,   "APPLICATIONS DEV'T AND EMERGING TECHNOLOGIES", 10, 0
-        it24     db 9, "[I]", 9, "IT 24", 9,9,  "6.0", 9,9,   "CAPSTONE PROJECT 2", 10, 0
-        caed500c     db 9, "[I]", 9, "CAED 500C", 9,9,  "3.0", 9,9,   "CAREER AND PERSONALITY DEVELOPMENT", 10, 0
-        it17     db 9, "[I]", 9, "IT 17", 9,9,  "3.0", 9,9,   "SOCIAL AND PROFESSIONAL ISSUES", 10, 0
-        it23     db 9, "[I]", 9, "IT 23", 9,9,  "3.0", 9,9,   "SYSTEMS ADMINISTRATON AND MAINTENANCE", 10, 0
+        cce106     db 9, "[A]", 9, "CCE 106", 9,9, "3.0", 9,9,   "APPLICATIONS DEV'T AND EMERGING TECHNOLOGIES", 10, 0
+        it24     db 9, "[B]", 9, "IT 24", 9,9,  "6.0", 9,9,   "CAPSTONE PROJECT 2", 10, 0
+        caed500c     db 9, "[C]", 9, "CAED 500C", 9,  "3.0", 9,9,   "CAREER AND PERSONALITY DEVELOPMENT", 10, 0
+        it17     db 9, "[D]", 9, "IT 17", 9,9,  "3.0", 9,9,   "SOCIAL AND PROFESSIONAL ISSUES", 10, 0
+        it23     db 9, "[E]", 9, "IT 23", 9,9,  "3.0", 9,9,   "SYSTEMS ADMINISTRATON AND MAINTENANCE", 10, 0
         
         ; 4th Year / 2nd Sem
         fourthyear2     db 10, 10, 9, "4th Year | 2nd Sem", 10, 0
         s27    db 9, "NO.", 9, "Title", 9,9,   "Unit",9,9,   "Description", 10, 0
-        it25     db 9, "[H]", 9, "IT 25", 9,9, "9.0", 9,9,   "PRACTICUM", 10, 0
+        it25     db 9, "[F]", 9, "IT 25", 9,9, "9.0", 9,9,   "PRACTICUM", 10, 0
 
         one db 10, 10, 9, "[1] - 1st Year & 1st Sem", 10, 0
         two db 9, "[2] - 1st Year & 2nd Sem", 10, 0 
@@ -150,7 +151,7 @@
 		print15 db 256 dup (0)
 		print16 db 256 dup (0)
         
-		
+
         I7 DWORD ? ;11
         L7 DWORD ? ;12
         L71 DWORD ? ;1S
@@ -241,7 +242,6 @@ begin:
         invoke StdOut, addr it2
 		invoke StdOut, addr U122
 
-
         ;21
         invoke StdOut, addr secondYear1
         invoke StdOut, addr S21
@@ -267,6 +267,53 @@ begin:
         invoke StdOut, addr it7
 		invoke StdOut, addr A222
 
+        ;31
+        invoke StdOut, addr thirdYear
+        invoke StdOut, addr s23
+        invoke StdOut, addr it11
+        invoke StdOut, addr ge9
+        invoke StdOut, addr ge8
+        invoke StdOut, addr phys101
+        invoke StdOut, addr it12
+        invoke StdOut, addr it14
+        invoke StdOut, addr ge11
+        invoke StdOut, addr it13
+		invoke StdOut, addr A222
+
+        ;32
+        invoke StdOut, addr thirdYear2
+        invoke StdOut, addr s24
+        invoke StdOut, addr it16
+        invoke StdOut, addr uge2
+        invoke StdOut, addr it15
+        invoke StdOut, addr it18
+        invoke StdOut, addr it19
+        invoke StdOut, addr it20
+        invoke StdOut, addr phys102
+        invoke StdOut, addr ge7
+		invoke StdOut, addr A222
+        
+
+        invoke StdOut, addr thirdYear3
+        invoke StdOut, addr s25
+        invoke StdOut, addr it22
+        invoke StdOut, addr it21
+		invoke StdOut, addr A222
+
+        invoke StdOut, addr fourthyear1
+        invoke StdOut, addr s26
+        invoke StdOut, addr cce106
+        invoke StdOut, addr uge2
+        invoke StdOut, addr it24
+        invoke StdOut, addr caed500c
+        invoke StdOut, addr it17
+        invoke StdOut, addr it23
+		invoke StdOut, addr A222
+
+        invoke StdOut, addr fourthyear2
+        invoke StdOut, addr s27
+        invoke StdOut, addr it25
+
 		jmp choices
 
 choices:
@@ -275,6 +322,11 @@ choices:
         invoke StdOut, addr two
         invoke StdOut, addr three
         invoke StdOut, addr four
+        invoke StdOut, addr five
+        invoke StdOut, addr six
+        invoke StdOut, addr seven
+        invoke StdOut, addr eight
+        invoke StdOut, addr nine
 
         ;fnctns
         invoke StdOut, addr select
@@ -394,86 +446,6 @@ select1:
                 mov ecx, SIZEOF nstp1
                 cld
                 rep movsb
-        .elseif E9 == "I"
-                add eax, 3
-                sub eax, 1
-                add A7, eax
-                invoke StdOut, addr it1
-				mov esi, OFFSET it1
-                mov edi, OFFSET print9
-                mov ecx, SIZEOF it1
-                cld
-                rep movsb
-        .elseif E9 == "J"
-                add eax, 3
-                sub eax, 1
-                add A7, eax
-                invoke StdOut, addr ge15
-				mov esi, OFFSET ge15
-                mov edi, OFFSET print10
-                mov ecx, SIZEOF ge15
-                cld
-                rep movsb
-         .elseif E9 == "K"
-                add eax, 3
-                sub eax, 1
-                add A7, eax
-                invoke StdOut, addr nstp2
-				mov esi, OFFSET nstp2
-                mov edi, OFFSET print11
-                mov ecx, SIZEOF nstp2
-                cld
-                rep movsb
-        .elseif E9 == "L"
-                add eax, 3
-                sub eax, 1
-                add A7, eax
-                invoke StdOut, addr ge4
-				mov esi, OFFSET ge4
-                mov edi, OFFSET print12
-                mov ecx, SIZEOF ge4
-                cld
-                rep movsb
-        .elseif E9 == "M"
-                add eax, 3
-                sub eax, 1
-                add A7, eax
-                invoke StdOut, addr cce103
-				mov esi, OFFSET cce103
-                mov edi, OFFSET print13
-                mov ecx, SIZEOF cce103
-                cld
-                rep movsb
-        .elseif E9 == "N"
-                add eax, 6
-                sub eax, 1
-                add A7, eax
-                invoke StdOut, addr uge1
-				mov esi, OFFSET uge1
-                mov edi, OFFSET print14
-                mov ecx, SIZEOF uge1
-                cld
-                rep movsb
-        .elseif E9 == "O"
-                add eax, 2
-                sub eax, 1
-                add A7, eax
-                invoke StdOut, addr gpe2
-				mov esi, OFFSET gpe2
-                mov edi, OFFSET print15
-                mov ecx, SIZEOF gpe2
-                cld
-                rep movsb
-        .elseif E9 == "P"
-                add eax, 2
-                sub eax, 1
-                add A7, eax
-                invoke StdOut, addr it2
-				mov esi, OFFSET it2
-                mov edi, OFFSET print16
-                mov ecx, SIZEOF it2
-                cld
-                rep movsb
         .else
         jmp total1st
         .endif
@@ -511,8 +483,6 @@ print1st:
 		invoke StdOut, addr print8
                 invoke StdOut, addr print9
 
-
-		
 		;total units
 		invoke StdOut, addr totalUnits
 		;for the if condition
