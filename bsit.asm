@@ -65,10 +65,36 @@
 		A222	db 9, "-----------------------------------------------------------------------------------------", 0
         
 
-        one      db 10, 10, 9, "[1] - 1st Year & 1st Sem", 10, 0
-        two      db 9, "[2] - 1st Year & 2nd Sem", 10, 0 
-        three     db 9, "[3] - 2nd Year & 1st Sem", 10, 0 
-        four      db 9, "[4] - 2nd Year & 2nd Sem", 10, 0
+        ; 3rd Year / 1st Sem
+        thirdYear     db 10, 10, 9, "3rd Year | 1st Sem", 10, 0
+        s22    db 9, "NO.", 9, "Title", 9,9,   "Unit",9,9,   "Description", 10, 0
+        it6     db 9, "[A]", 9, "IT 6", 9,9, "3.0", 9,9,   "FUNDAMENTALS OF DATABASE SYSTEMS", 10, 0
+        it8     db 9, "[B]", 9, "IT 8", 9,9,  "3.0", 9,9,   "CALCULUS 2", 10, 0
+        it10     db 9, "[C]", 9, "IT 10", 9,9,  "3.0", 9,9,   "IT ELECTIVE 3", 10, 0
+        it26     db 9, "[D]", 9, "IT 26", 9,9,    "6.0", 9,9,   "PROFESSIONAL TRACK FOR IT 3", 10, 0
+        mth103     db 9, "[E]", 9, "MTH 103", 9,9,   "3.0", 9,9,   "PROBABILITIES AND STATISTICS", 10, 0
+        gpe4    db 9, "[F]", 9, "GPE 4", 9,9, "2.0", 9,9,   "PHYSICAL ACTIVITIES TOWARDS HEALTH AND FITNESS", 10, 0
+        it7     db 9, "[G]", 9, "IT 7", 9,9, "3.0", 9,9,   "INTRODUCTION TO HUMAN COMPUTER INTERACTION", 10, 0
+
+        ; 3rd Year / 2nd Sem
+        thirdYear2     db 10, 10, 9, "3rd Year | 2nd Sem", 10, 0
+        s22    db 9, "NO.", 9, "Title", 9,9,   "Unit",9,9,   "Description", 10, 0
+        it6     db 9, "[H]", 9, "IT 6", 9,9, "3.0", 9,9,   "FUNDAMENTALS OF DATABASE SYSTEMS", 10, 0
+        it8     db 9, "[I]", 9, "IT 8", 9,9,  "3.0", 9,9,   "CALCULUS 2", 10, 0
+        it10     db 9, "[J]", 9, "IT 10", 9,9,  "3.0", 9,9,   "IT ELECTIVE 3", 10, 0
+        it26     db 9, "[K]", 9, "IT 26", 9,9,    "6.0", 9,9,   "PROFESSIONAL TRACK FOR IT 3", 10, 0
+        mth103     db 9, "[L]", 9, "MTH 103", 9,9,   "3.0", 9,9,   "PROBABILITIES AND STATISTICS", 10, 0
+        gpe4    db 9, "[M]", 9, "GPE 4", 9,9, "2.0", 9,9,   "PHYSICAL ACTIVITIES TOWARDS HEALTH AND FITNESS", 10, 0
+        it7     db 9, "[N]", 9, "IT 7", 9,9, "3.0", 9,9,   "INTRODUCTION TO HUMAN COMPUTER INTERACTION", 10, 0
+
+
+
+        one db 10, 10, 9, "[1] - 1st Year & 1st Sem", 10, 0
+        two db 9, "[2] - 1st Year & 2nd Sem", 10, 0 
+        three db 9, "[3] - 2nd Year & 1st Sem", 10, 0 
+        four db 9, "[4] - 2nd Year & 2nd Sem", 10, 0
+        five db 9, "[5] - 3rd Year & 1st Sem", 10, 0
+        six db 9, "[6] - 3rd Year & 2nd Sem", 10, 0
 
         select      db 10, 9, "Select Year and Semester: ", 0
         ;enroll      db 10, 10, 9, "ENROLL SUBJECTS", 0 
@@ -773,7 +799,7 @@ print2nd:
 		jmp exit
 
 
-;2ND YEAR SND SEM
+;2ND YEAR 2ND SEM
 secondyear2:
         invoke ClearScreen
         invoke StdOut, addr UM
