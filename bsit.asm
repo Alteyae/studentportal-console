@@ -293,13 +293,13 @@ begin:
         invoke StdOut, addr ge7
 		invoke StdOut, addr A222
         
-
+        ;33
         invoke StdOut, addr thirdYear3
         invoke StdOut, addr s25
         invoke StdOut, addr it22
         invoke StdOut, addr it21
 		invoke StdOut, addr A222
-
+        ;41
         invoke StdOut, addr fourthyear1
         invoke StdOut, addr s26
         invoke StdOut, addr cce106
@@ -309,7 +309,7 @@ begin:
         invoke StdOut, addr it17
         invoke StdOut, addr it23
 		invoke StdOut, addr A222
-
+        ;42
         invoke StdOut, addr fourthyear2
         invoke StdOut, addr s27
         invoke StdOut, addr it25
@@ -341,6 +341,8 @@ choices:
                 jmp secondyear2
         .elseif B9 == '5'
                 jmp thirdyear1
+        .elseif B9 == '6'
+                jmp thirdyear2
         .endif
 
 firstyear1:
@@ -1069,6 +1071,157 @@ print3rd:
 		
 		;copy for Divider top
 		invoke StdOut, addr thirdYear
+		invoke StdOut, addr s22
+		;copy for Divider bottom
+		
+		invoke StdOut, addr print1
+		invoke StdOut, addr print2
+		invoke StdOut, addr print3
+		invoke StdOut, addr print4
+		invoke StdOut, addr print5
+		invoke StdOut, addr print6
+		invoke StdOut, addr print7
+		invoke StdOut, addr print8
+		
+		;total units
+		invoke StdOut, addr totalUnits
+		;for the if condition
+		invoke StdOut, addr E9
+		
+		jmp exit
+
+;3RD YEAR SECOND SEM
+thirdyear2:
+        invoke ClearScreen
+        invoke StdOut, addr UM
+	invoke StdOut, addr CollegeDepartment
+        invoke StdOut, addr Program
+	invoke StdOut, addr Divider
+	invoke StdOut, addr Divider
+	invoke StdOut, addr Name_Declared
+	invoke StdOut, addr Name_Input
+        invoke StdOut, addr ID_Declared
+        invoke StdOut, addr ID_Input
+
+        invoke StdOut, addr thirdYear2
+        invoke StdOut, addr s24
+        invoke StdOut, addr it16
+        invoke StdOut, addr uge2
+        invoke StdOut, addr it15
+        invoke StdOut, addr it18
+        invoke StdOut, addr it19
+        invoke StdOut, addr it20
+        invoke StdOut, addr phys102
+        invoke StdOut, addr ge7
+        
+        jmp select32
+
+select32:
+        invoke StdOut, addr selectCourse_prompt 
+        invoke StdIn, addr E9, 10
+        .if E9 == "I"
+                add eax, 3
+                sub eax, 1
+                add A7, eax 
+                invoke StdOut, addr it16
+				mov esi, OFFSET it16
+                mov edi, OFFSET print1
+                mov ecx, SIZEOF it16
+                cld
+                rep movsb
+        .elseif E9 == "J"
+                add eax, 3
+                sub eax, 1
+                add A7, eax
+                invoke StdOut, addr uge2
+				mov esi, OFFSET uge2
+                mov edi, OFFSET print2
+                mov ecx, SIZEOF uge2
+                cld
+                rep movsb
+        .elseif E9 == "K"
+                add eax, 3
+                sub eax, 1
+                add A7, eax
+                invoke StdOut, addr it15
+				mov esi, OFFSET it15
+                mov edi, OFFSET print3
+                mov ecx, SIZEOF it15
+                cld
+                rep movsb
+        .elseif E9 == "L"
+                add eax, 3
+                sub eax, 1
+                add A7, eax
+                invoke StdOut, addr it18
+				mov esi, OFFSET it18
+                mov edi, OFFSET print4
+                mov ecx, SIZEOF it18
+                cld
+                rep movsb
+        .elseif E9 == "M"
+                add eax, 3
+                sub eax, 1
+                add A7, eax
+                invoke StdOut, addr it19
+				mov esi, OFFSET it19
+                mov edi, OFFSET print5
+                mov ecx, SIZEOF it19
+                cld
+                rep movsb
+        .elseif E9 == "N"
+                add eax, 3
+                sub eax, 1
+                add A7, eax
+                invoke StdOut, addr it20
+				mov esi, OFFSET it20
+                mov edi, OFFSET print6
+                mov ecx, SIZEOF it20
+                cld
+                rep movsb
+        .elseif E9 == "O"
+                add eax, 4
+                sub eax, 1
+                add A7, eax
+                invoke StdOut, addr phys102
+				mov esi, OFFSET phys102
+                mov edi, OFFSET print7
+                mov ecx, SIZEOF phys102
+                cld
+                rep movsb
+        .elseif E9 == "P"
+                add eax, 3
+                sub eax, 1
+                add A7, eax
+                invoke StdOut, addr ge7
+				mov esi, OFFSET ge7
+                mov edi, OFFSET print8
+                mov ecx, SIZEOF ge7
+                cld
+                rep movsb
+        .else
+        jmp total3rd2
+        .endif
+        jmp select32
+
+total3rd2:
+        mov eax, A7
+        invoke dwtoa, eax, addr E9
+        jmp print3rd2
+
+print3rd2:
+		invoke ClearScreen
+		invoke StdOut, addr UM
+		invoke StdOut, addr CollegeDepartment
+                invoke StdOut, addr Program
+		invoke StdOut, addr Divider
+		invoke StdOut, addr Divider
+		invoke StdOut, addr Name_Declared
+		invoke StdOut, addr Name_Input
+		invoke StdOut, addr Sub_En
+		
+		;copy for Divider top
+		invoke StdOut, addr thirdYear2
 		invoke StdOut, addr s22
 		;copy for Divider bottom
 		
