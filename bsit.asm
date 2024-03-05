@@ -67,27 +67,47 @@
 
         ; 3rd Year / 1st Sem
         thirdYear     db 10, 10, 9, "3rd Year | 1st Sem", 10, 0
-        s22    db 9, "NO.", 9, "Title", 9,9,   "Unit",9,9,   "Description", 10, 0
-        it6     db 9, "[A]", 9, "IT 6", 9,9, "3.0", 9,9,   "FUNDAMENTALS OF DATABASE SYSTEMS", 10, 0
-        it8     db 9, "[B]", 9, "IT 8", 9,9,  "3.0", 9,9,   "CALCULUS 2", 10, 0
-        it10     db 9, "[C]", 9, "IT 10", 9,9,  "3.0", 9,9,   "IT ELECTIVE 3", 10, 0
-        it26     db 9, "[D]", 9, "IT 26", 9,9,    "6.0", 9,9,   "PROFESSIONAL TRACK FOR IT 3", 10, 0
-        mth103     db 9, "[E]", 9, "MTH 103", 9,9,   "3.0", 9,9,   "PROBABILITIES AND STATISTICS", 10, 0
-        gpe4    db 9, "[F]", 9, "GPE 4", 9,9, "2.0", 9,9,   "PHYSICAL ACTIVITIES TOWARDS HEALTH AND FITNESS", 10, 0
-        it7     db 9, "[G]", 9, "IT 7", 9,9, "3.0", 9,9,   "INTRODUCTION TO HUMAN COMPUTER INTERACTION", 10, 0
+        s23    db 9, "NO.", 9, "Title", 9,9,   "Unit",9,9,   "Description", 10, 0
+        it11     db 9, "[A]", 9, "IT 11", 9,9, "3.0", 9,9,   "NETWORKING 2", 10, 0
+        ge9     db 9, "[B]", 9, "GE 9", 9,9,  "3.0", 9,9,   "ETHICS (Disciplinal)", 10, 0
+        ge8     db 9, "[C]", 9, "GE 8", 9,9,  "3.0", 9,9,   "READING IN PHILIPPINE HISTORY", 10, 0
+        phys101     db 9, "[D]", 9, "PHYS 101", 9,9,    "4.0", 9,9,   "COLLEGE PHYSICS 1", 10, 0
+        it12     db 9, "[E]", 9, "IT 12", 9,9,   "3.0", 9,9,   "SYSTEM INTEGRATION & ARCHITECTURE", 10, 0
+        it14    db 9, "[F]", 9, "IT 14", 9,9, "3.0", 9,9,   "PROFESSIONAL TRACK FOR IT 5", 10, 0
+        ge11     db 9, "[G]", 9, "GE 11", 9,9, "3.0", 9,9,   "THE ENTREPRENEURIAL MIND", 10, 0
+        it13     db 9, "[G]", 9, "IT 13", 9,9, "3.0", 9,9,   "PROFESSIONAL TRACK FOR IT 4", 10, 0
 
         ; 3rd Year / 2nd Sem
         thirdYear2     db 10, 10, 9, "3rd Year | 2nd Sem", 10, 0
-        s22    db 9, "NO.", 9, "Title", 9,9,   "Unit",9,9,   "Description", 10, 0
-        it6     db 9, "[H]", 9, "IT 6", 9,9, "3.0", 9,9,   "FUNDAMENTALS OF DATABASE SYSTEMS", 10, 0
-        it8     db 9, "[I]", 9, "IT 8", 9,9,  "3.0", 9,9,   "CALCULUS 2", 10, 0
-        it10     db 9, "[J]", 9, "IT 10", 9,9,  "3.0", 9,9,   "IT ELECTIVE 3", 10, 0
-        it26     db 9, "[K]", 9, "IT 26", 9,9,    "6.0", 9,9,   "PROFESSIONAL TRACK FOR IT 3", 10, 0
-        mth103     db 9, "[L]", 9, "MTH 103", 9,9,   "3.0", 9,9,   "PROBABILITIES AND STATISTICS", 10, 0
-        gpe4    db 9, "[M]", 9, "GPE 4", 9,9, "2.0", 9,9,   "PHYSICAL ACTIVITIES TOWARDS HEALTH AND FITNESS", 10, 0
-        it7     db 9, "[N]", 9, "IT 7", 9,9, "3.0", 9,9,   "INTRODUCTION TO HUMAN COMPUTER INTERACTION", 10, 0
+        s24    db 9, "NO.", 9, "Title", 9,9,   "Unit",9,9,   "Description", 10, 0
+        it16     db 9, "[H]", 9, "IT 16", 9,9, "3.0", 9,9,   "INFORMATION ASSURANCE AND SECURITY 1", 10, 0
+        uge2     db 9, "[I]", 9, "UGE 2", 9,9,  "3.0", 9,9,   "TECHNICAL WRITING IN THE DISCIPLINE", 10, 0
+        it15     db 9, "[J]", 9, "IT 15", 9,9,  "3.0", 9,9,   "INTEGRATIVE PROGRAMMING AND TECHNOLOGIES", 10, 0
+        it18     db 9, "[K]", 9, "IT 18", 9,9,    "3.0", 9,9,   "QUANTITATIVE METHODS", 10, 0
+        it19     db 9, "[L]", 9, "IT 19", 9,9,   "3.0", 9,9,   "TECHNOPRENEURSHIP", 10, 0
+        it20    db 9, "[M]", 9, "IT 20", 9,9, "3.0", 9,9,   "PROFESSIONAL TRACK FOR IT 6", 10, 0
+        phys102     db 9, "[N]", 9, "PHYS 102", 9,9, "4.0", 9,9,   "COLLEGE PHYSICS 2", 10, 0
+        ge7     db 9, "[N]", 9, "GE 7", 9,9, "3.0", 9,9,   "ART APPRECIATION", 10, 0
 
-
+        ; 3rd Year / Summer
+        thirdYear3     db 10, 10, 9, "3rd Year | Summer", 10, 0
+        s25    db 9, "NO.", 9, "Title", 9,9,   "Unit",9,9,   "Description", 10, 0
+        it22     db 9, "[H]", 9, "IT 22", 9,9, "3.0", 9,9,   "CAPSTONE PROJECT 1", 10, 0
+        it21     db 9, "[I]", 9, "IT 21", 9,9,  "3.0", 9,9,   "INFORMATION ASSURANCE AND SECURITY 2", 10, 0
+        
+        ; 4th Year / 1st Sem
+        fourthyear1     db 10, 10, 9, "4th Year | 1st Sem", 10, 0
+        s26    db 9, "NO.", 9, "Title", 9,9,   "Unit",9,9,   "Description", 10, 0
+        cce106     db 9, "[H]", 9, "CCE 106", 9,9, "3.0", 9,9,   "APPLICATIONS DEV'T AND EMERGING TECHNOLOGIES", 10, 0
+        it24     db 9, "[I]", 9, "IT 24", 9,9,  "6.0", 9,9,   "CAPSTONE PROJECT 2", 10, 0
+        caed500c     db 9, "[I]", 9, "CAED 500C", 9,9,  "3.0", 9,9,   "CAREER AND PERSONALITY DEVELOPMENT", 10, 0
+        it17     db 9, "[I]", 9, "IT 17", 9,9,  "3.0", 9,9,   "SOCIAL AND PROFESSIONAL ISSUES", 10, 0
+        it23     db 9, "[I]", 9, "IT 23", 9,9,  "3.0", 9,9,   "SYSTEMS ADMINISTRATON AND MAINTENANCE", 10, 0
+        
+        ; 4th Year / 2nd Sem
+        fourthyear2     db 10, 10, 9, "4th Year | 2nd Sem", 10, 0
+        s27    db 9, "NO.", 9, "Title", 9,9,   "Unit",9,9,   "Description", 10, 0
+        it25     db 9, "[H]", 9, "IT 25", 9,9, "9.0", 9,9,   "PRACTICUM", 10, 0
 
         one db 10, 10, 9, "[1] - 1st Year & 1st Sem", 10, 0
         two db 9, "[2] - 1st Year & 2nd Sem", 10, 0 
@@ -95,6 +115,9 @@
         four db 9, "[4] - 2nd Year & 2nd Sem", 10, 0
         five db 9, "[5] - 3rd Year & 1st Sem", 10, 0
         six db 9, "[6] - 3rd Year & 2nd Sem", 10, 0
+        seven db 9, "[7] - 3rd Year & Summer", 10, 0
+        eight db 9, "[8] - 4th Year & 1st Sem", 10, 0
+        nine db 9, "[9] - 4th Year & 2nd Sem", 10, 0
 
         select      db 10, 9, "Select Year and Semester: ", 0
         ;enroll      db 10, 10, 9, "ENROLL SUBJECTS", 0 
