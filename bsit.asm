@@ -97,7 +97,7 @@
         it21     db 9, "[R]", 9, "IT 21", 9,9,  "3.0", 9,9,   "INFORMATION ASSURANCE AND SECURITY 2", 10, 0
         
         ; 4th Year / 1st Sem
-        fourthyear1     db 10, 10, 9, "4th Year | 1st Sem", 10, 0
+        fourthYear1     db 10, 10, 9, "4th Year | 1st Sem", 10, 0
         s26    db 9, "NO.", 9, "Title", 9,9,   "Unit",9,9,   "Description", 10, 0
         cce106     db 9, "[A]", 9, "CCE 106", 9,9, "3.0", 9,9,   "APPLICATIONS DEV'T AND EMERGING TECHNOLOGIES", 10, 0
         it24     db 9, "[B]", 9, "IT 24", 9,9,  "6.0", 9,9,   "CAPSTONE PROJECT 2", 10, 0
@@ -106,7 +106,7 @@
         it23     db 9, "[E]", 9, "IT 23", 9,9,  "3.0", 9,9,   "SYSTEMS ADMINISTRATON AND MAINTENANCE", 10, 0
         
         ; 4th Year / 2nd Sem
-        fourthyear2     db 10, 10, 9, "4th Year | 2nd Sem", 10, 0
+        fourthYear2     db 10, 10, 9, "4th Year | 2nd Sem", 10, 0
         s27    db 9, "NO.", 9, "Title", 9,9,   "Unit",9,9,   "Description", 10, 0
         it25     db 9, "[F]", 9, "IT 25", 9,9, "9.0", 9,9,   "PRACTICUM", 10, 0
 
@@ -300,7 +300,7 @@ begin:
         invoke StdOut, addr it21
 		invoke StdOut, addr A222
         ;41
-        invoke StdOut, addr fourthyear1
+        invoke StdOut, addr fourthYear1
         invoke StdOut, addr s26
         invoke StdOut, addr cce106
         invoke StdOut, addr uge2
@@ -310,7 +310,7 @@ begin:
         invoke StdOut, addr it23
 		invoke StdOut, addr A222
         ;42
-        invoke StdOut, addr fourthyear2
+        invoke StdOut, addr fourthYear2
         invoke StdOut, addr s27
         invoke StdOut, addr it25
 
@@ -343,6 +343,12 @@ choices:
                 jmp thirdyear1
         .elseif B9 == '6'
                 jmp thirdyear2
+        .elseif B9 == '7'
+                jmp thirdyear3
+        .elseif B9 == '8'
+                jmp fourthyear1
+        .elseif B9 == '9'
+                jmp fourthyear2
         .endif
 
 firstyear1:
@@ -1240,7 +1246,274 @@ print3rd2:
 		invoke StdOut, addr E9
 		
 		jmp exit
+
+;3RD YEAR SUMMER
+thirdyear3:
+        invoke ClearScreen
+        invoke StdOut, addr UM
+	invoke StdOut, addr CollegeDepartment
+        invoke StdOut, addr Program
+	invoke StdOut, addr Divider
+	invoke StdOut, addr Divider
+	invoke StdOut, addr Name_Declared
+	invoke StdOut, addr Name_Input
+        invoke StdOut, addr ID_Declared
+        invoke StdOut, addr ID_Input
+
+        invoke StdOut, addr thirdYear3
+        invoke StdOut, addr s25
+        invoke StdOut, addr it22
+        invoke StdOut, addr it21
+        
+        jmp select33
+
+select33:
+        invoke StdOut, addr selectCourse_prompt 
+        invoke StdIn, addr E9, 10
+        .if E9 == "Q"
+                add eax, 3
+                sub eax, 1
+                add A7, eax 
+                invoke StdOut, addr it22
+				mov esi, OFFSET it22
+                mov edi, OFFSET print1
+                mov ecx, SIZEOF it22
+                cld
+                rep movsb
+        .elseif E9 == "R"
+                add eax, 3
+                sub eax, 1
+                add A7, eax
+                invoke StdOut, addr it21
+				mov esi, OFFSET it21
+                mov edi, OFFSET print2
+                mov ecx, SIZEOF it21
+                cld
+                rep movsb
+        .else
+        jmp total3rd3
+        .endif
+        jmp select33
+
+total3rd3:
+        mov eax, A7
+        invoke dwtoa, eax, addr E9
+        jmp print3rd3
+
+print3rd3:
+		invoke ClearScreen
+		invoke StdOut, addr UM
+		invoke StdOut, addr CollegeDepartment
+                invoke StdOut, addr Program
+		invoke StdOut, addr Divider
+		invoke StdOut, addr Divider
+		invoke StdOut, addr Name_Declared
+		invoke StdOut, addr Name_Input
+		invoke StdOut, addr Sub_En
 		
+		;copy for Divider top
+		invoke StdOut, addr thirdyear3
+		invoke StdOut, addr s22
+		;copy for Divider bottom
+		
+		invoke StdOut, addr print1
+		invoke StdOut, addr print2
+		
+		;total units
+		invoke StdOut, addr totalUnits
+		;for the if condition
+		invoke StdOut, addr E9
+		
+		jmp exit
+
+;4TH YEAR FIRST SEM
+fourthyear1:
+        invoke ClearScreen
+        invoke StdOut, addr UM
+	invoke StdOut, addr CollegeDepartment
+        invoke StdOut, addr Program
+	invoke StdOut, addr Divider
+	invoke StdOut, addr Divider
+	invoke StdOut, addr Name_Declared
+	invoke StdOut, addr Name_Input
+        invoke StdOut, addr ID_Declared
+        invoke StdOut, addr ID_Input
+
+        invoke StdOut, addr fourthYear1
+        invoke StdOut, addr s26
+        invoke StdOut, addr cce106
+        invoke StdOut, addr uge2
+        invoke StdOut, addr it24
+        invoke StdOut, addr caed500c
+        invoke StdOut, addr it17
+        invoke StdOut, addr it23
+        
+        jmp select41
+
+select41:
+        invoke StdOut, addr selectCourse_prompt 
+        invoke StdIn, addr E9, 10
+        .if E9 == "A"
+                add eax, 3
+                sub eax, 1
+                add A7, eax 
+                invoke StdOut, addr cce106
+				mov esi, OFFSET cce106
+                mov edi, OFFSET print1
+                mov ecx, SIZEOF cce106
+                cld
+                rep movsb
+        .elseif E9 == "B"
+                add eax, 3
+                sub eax, 1
+                add A7, eax
+                invoke StdOut, addr it24
+				mov esi, OFFSET it24
+                mov edi, OFFSET print2
+                mov ecx, SIZEOF it24
+                cld
+                rep movsb
+        .elseif E9 == "C"
+                add eax, 3
+                sub eax, 1
+                add A7, eax
+                invoke StdOut, addr caed500c
+				mov esi, OFFSET caed500c
+                mov edi, OFFSET print3
+                mov ecx, SIZEOF caed500c
+                cld
+                rep movsb
+        .elseif E9 == "D"
+                add eax, 3
+                sub eax, 1
+                add A7, eax
+                invoke StdOut, addr it17
+				mov esi, OFFSET it17
+                mov edi, OFFSET print4
+                mov ecx, SIZEOF it17
+                cld
+                rep movsb
+        .elseif E9 == "E"
+                add eax, 3
+                sub eax, 1
+                add A7, eax
+                invoke StdOut, addr it23
+				mov esi, OFFSET it23
+                mov edi, OFFSET print5
+                mov ecx, SIZEOF it23
+                cld
+                rep movsb
+        .else
+        jmp total4th
+        .endif
+        jmp select41
+
+total4th:
+        mov eax, A7
+        invoke dwtoa, eax, addr E9
+        jmp print4th
+
+print4th:
+		invoke ClearScreen
+		invoke StdOut, addr UM
+		invoke StdOut, addr CollegeDepartment
+                invoke StdOut, addr Program
+		invoke StdOut, addr Divider
+		invoke StdOut, addr Divider
+		invoke StdOut, addr Name_Declared
+		invoke StdOut, addr Name_Input
+		invoke StdOut, addr Sub_En
+		
+		;copy for Divider top
+		invoke StdOut, addr fourthyear1
+		invoke StdOut, addr s22
+		;copy for Divider bottom
+		
+		invoke StdOut, addr print1
+		invoke StdOut, addr print2
+		invoke StdOut, addr print3
+		invoke StdOut, addr print4
+		invoke StdOut, addr print5
+		invoke StdOut, addr print6
+		invoke StdOut, addr print7
+		invoke StdOut, addr print8
+		
+		;total units
+		invoke StdOut, addr totalUnits
+		;for the if condition
+		invoke StdOut, addr E9
+		
+		jmp exit
+
+;3RD YEAR SUMMER
+fourthyear2:
+        invoke ClearScreen
+        invoke StdOut, addr UM
+	invoke StdOut, addr CollegeDepartment
+        invoke StdOut, addr Program
+	invoke StdOut, addr Divider
+	invoke StdOut, addr Divider
+	invoke StdOut, addr Name_Declared
+	invoke StdOut, addr Name_Input
+        invoke StdOut, addr ID_Declared
+        invoke StdOut, addr ID_Input
+
+        invoke StdOut, addr fourthYear2
+        invoke StdOut, addr s25
+        invoke StdOut, addr it25
+        
+        jmp select42
+
+select42:
+        invoke StdOut, addr selectCourse_prompt 
+        invoke StdIn, addr E9, 10
+        .if E9 == "F"
+                add eax, 9
+                sub eax, 1
+                add A7, eax 
+                invoke StdOut, addr it25
+				mov esi, OFFSET it25
+                mov edi, OFFSET print1
+                mov ecx, SIZEOF it25
+                cld
+                rep movsb
+        .else
+        jmp total4th2
+        .endif
+        jmp select42
+
+total4th2:
+        mov eax, A7
+        invoke dwtoa, eax, addr E9
+        jmp print4th2
+
+print4th2:
+		invoke ClearScreen
+		invoke StdOut, addr UM
+		invoke StdOut, addr CollegeDepartment
+                invoke StdOut, addr Program
+		invoke StdOut, addr Divider
+		invoke StdOut, addr Divider
+		invoke StdOut, addr Name_Declared
+		invoke StdOut, addr Name_Input
+		invoke StdOut, addr Sub_En
+		
+		;copy for Divider top
+		invoke StdOut, addr fourthYear2
+		invoke StdOut, addr s22
+		;copy for Divider bottom
+		
+		invoke StdOut, addr print1
+		invoke StdOut, addr print2
+		
+		;total units
+		invoke StdOut, addr totalUnits
+		;for the if condition
+		invoke StdOut, addr E9
+		
+		jmp exit
+
+
 exit:
         invoke ExitProcess, 0
 end start
