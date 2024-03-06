@@ -9,7 +9,7 @@
 .data
         UM     db 9,9,9,9,9, "UNIVERSITY OF MINDANAO", 10, 0
         CollegeDepartment db 9,9,9, "     DEPARTMENT: ","COLLEGE OF COMPUTING EDUCATION", 10, 0
-        Program   db 9,9, "    PROGRAM: ","Bachelor of Science in Information Technology", 10, 0
+        Program   db 9,9, "    PROGRAM: ","BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY", 10, 0
 		Divider db 9, "-----------------------------------------------------------------------------------------", 10, 0
 
         ; 1st Year / 1st Sem 
@@ -122,7 +122,6 @@
 
         select      db 10, 9, "Select Year and Semester: ", 0
         enroll      db 10, 10, 9, "ENROLL SUBJECTS", 0 
-        ;key      db 10, 9, "Select a course [1-8] or enter any key to exit: ", 0
         invalid     db 9, "Invalid Input! Try Again.", 10, 0
         totalUnits      db 10, 9, "Total Units: ", 0
 		
@@ -132,6 +131,7 @@
                 Name_Declared db 10,9, "Name: ",0
                 ID_Prompt db 9, "Enter Student ID Number: ",0
                 ID_Declared db 10,9, "Student ID Number: ", 0
+
 		; Print Revision
 		Sub_En db 10,10,9, "SUBJECTS ENROLLED:",0
 		print1 db 256 dup (0)
