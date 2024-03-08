@@ -152,25 +152,15 @@
 		print16 db 256 dup (0)
         
 
-        I7 DWORD ? ;11
-        L7 DWORD ? ;12
-        L71 DWORD ? ;1S
-        E7 DWORD ? ;21
-        A7 DWORD ? ;22
-        L72 DWORD ? ;2S
-        P7 DWORD ? ;31
-        U7 DWORD ? ;32
-        E71 DWORD ? ;41
-        R7 DWORD ? ;42
+        L7 DWORD ? 
+        E7 DWORD ? 
+        A7 DWORD ? 
               
         selectCourse_prompt    db 10, 9, "Select a course with their corresponding letter or any key to enroll", 10, 0
 
 .data?
         B9 db 50 dup (?)
         E9 db 50 dup (?)
-
-
-		
 		Name_Input db 20 dup(?)
                 ID_Input db 20 dup(?)
 .code   
