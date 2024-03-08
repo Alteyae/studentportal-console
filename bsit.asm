@@ -167,16 +167,9 @@
 
 .data?
         B9 db 50 dup (?)
-        R9 db 50 dup (?)
-        I9 db 50 dup (?)
-        L9 db 50 dup (?)
-        L91 db 50 dup (?)
         E9 db 50 dup (?)
-        A9 db 50 dup (?)
-        L92 db 50 dup (?)
-        P9 db 50 dup (?)
-        U9 db 50 dup (?)
-        E91 db 50 dup (?)
+
+
 		
 		Name_Input db 20 dup(?)
                 ID_Input db 20 dup(?)
