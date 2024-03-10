@@ -1,168 +1,168 @@
-.386
-.model flat, stdcall
-        option casemap :none
-        include \masm32\include\windows.inc
-        include \masm32\include\kernel32.inc
-        include \masm32\include\masm32.inc
-        includelib \masm32\lib\kernel32.lib
-        includelib \masm32\lib\masm32.lib
-.data
-        UM     db 9,9,9,9,9, "UNIVERSITY OF MINDANAO", 10, 0
-        CollegeDepartment db 9,9,9, "     DEPARTMENT: ","COLLEGE OF COMPUTING EDUCATION", 10, 0
-        Program   db 9,9, "    PROGRAM: ","BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY", 10, 0
-		Divider db 9, "-----------------------------------------------------------------------------------------", 10, 0
+        .386
+        .model flat, stdcall
+                option casemap :none
+                include \masm32\include\windows.inc
+                include \masm32\include\kernel32.inc
+                include \masm32\include\masm32.inc
+                includelib \masm32\lib\kernel32.lib
+                includelib \masm32\lib\masm32.lib
+        .data
+                UM     db 9,9,9,9,9, "UNIVERSITY OF MINDANAO", 10, 0
+                CollegeDepartment db 9,9,9, "     DEPARTMENT: ","COLLEGE OF COMPUTING EDUCATION", 10, 0
+                Program   db 9,9, "    PROGRAM: ","BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY", 10, 0
+                        Divider db 9, "-----------------------------------------------------------------------------------------", 10, 0
 
-        ; 1st Year / 1st Sem 
-        firstYear     db 10, 10, 9, "1st Year | 1st Sem", 10, 0
-        F11     db 9, "NO.", 9, "Title", 9,9,   "Unit",9,9,   "Description", 10, 0
-        cce101    db 9, "[A]", 9, "CCE101", 9,9,   "3.0", 9,9,   "INTRODUCTION TO COMPUTING", 10, 0
-        gpe1     db 9, "[B]", 9, "GPE 1", 9,9,    "2.0", 9,9,   "MOVEMENT ENHANCEMENT", 10, 0
-        ge1     db 9, "[C]", 9, "GE 1", 9,9,  "3.0", 9,9,   "UNDERSTANDING THE SELF", 10, 0
-        ge6     db 9, "[D]", 9, "GE 6", 9,9,  "3.0", 9,9,   "RIZAL'S LIFE AND WORKS", 10, 0
-        cce102    db 9, "[E]", 9, "CCE 102", 9,9,  "3.0", 9,9,   "COMPUTER PROGRAMMING 1", 10, 0
-        ge5    db 9, "[F]", 9, "GE 5", 9,9,   "3.0", 9,9,   "SCIENCE, TECHNOLOGY AND SOCIETY", 10, 0
-        ge2     db 9, "[G]", 9, "GE 2", 9,9,  "6.0", 9,9,   "PURPOSIVE COMMUNICATION W/ INTERACIVE LEARNING", 10, 0
-        nstp1     db 9, "[H]", 9, "NSTP 1", 9,9,  "3.0", 9,9,   "NATIONAL SERVICE TRAINING PROGRAM 1", 10, 0
-        B111   db 9, "-----------------------------------------------------------------------------------------", 0
-        
-        ; 1st Year / 2nd Sem 
-        firstYear2     db 10, 10, 9, "1st Year | 2nd Sem", 10, 0
-        F12     db 9, "NO.", 9, "Title", 9,9,   "Unit",9,9,   "Description", 10, 0
-        it1    db 9, "[I]", 9, "IT 1", 9,9,  "3.0", 9,9,   "PLATFORM TECHNOLOGIES", 10, 0
-        ge15     db 9, "[J]", 9, "GE 15", 9,9,  "3.0", 9,9,   "ENVIRONMENTAL SCIENCE", 10, 0
-        nstp2     db 9, "[K]", 9, "NSTP 2", 9,9,  "3.0", 9,9,   "NATIONAL SERVICE TRAINING PROGRAM 2", 10, 0
-        ge4     db 9, "[L]", 9, "GE 4", 9,9,   "3.0", 9,9,   "MATHEMATICS IN THE MORDERN WORLD", 10, 0
-        cce103   db 9, "[M]", 9, "CCE 103", 9,9, "3.0", 9,9,   "COMPUTER PROGRAMMING 2", 10, 0
-        uge1    db 9, "[N]", 9, "UGE 1", 9,9, "6.0", 9,9,   "READING COMPREHENSION", 10, 0
-        gpe2     db 9, "[O]", 9, "GPE 2", 9,9,  "2.0", 9,9,   "FITNESS EXERCISES", 10, 0
-        it2     db 9, "[P]", 9, "IT 2", 9,9,  "3.0", 9,9,   "DISCRETE MATHEMATICS", 10, 0
-		U122    db 9, "-----------------------------------------------------------------------------------------", 0
-        
+                ; 1st Year / 1st Sem 
+                firstYear     db 10, 10, 9, "1st Year | 1st Sem", 10, 0
+                F11     db 9, "NO.", 9, "Title", 9,9,   "Unit",9,9,   "Description", 10, 0
+                cce101    db 9, "[A]", 9, "CCE101", 9,9,   "3.0", 9,9,   "INTRODUCTION TO COMPUTING", 10, 0
+                gpe1     db 9, "[B]", 9, "GPE 1", 9,9,    "2.0", 9,9,   "MOVEMENT ENHANCEMENT", 10, 0
+                ge1     db 9, "[C]", 9, "GE 1", 9,9,  "3.0", 9,9,   "UNDERSTANDING THE SELF", 10, 0
+                ge6     db 9, "[D]", 9, "GE 6", 9,9,  "3.0", 9,9,   "RIZAL'S LIFE AND WORKS", 10, 0
+                cce102    db 9, "[E]", 9, "CCE 102", 9,9,  "3.0", 9,9,   "COMPUTER PROGRAMMING 1", 10, 0
+                ge5    db 9, "[F]", 9, "GE 5", 9,9,   "3.0", 9,9,   "SCIENCE, TECHNOLOGY AND SOCIETY", 10, 0
+                ge2     db 9, "[G]", 9, "GE 2", 9,9,  "6.0", 9,9,   "PURPOSIVE COMMUNICATION W/ INTERACIVE LEARNING", 10, 0
+                nstp1     db 9, "[H]", 9, "NSTP 1", 9,9,  "3.0", 9,9,   "NATIONAL SERVICE TRAINING PROGRAM 1", 10, 0
+                B111   db 9, "-----------------------------------------------------------------------------------------", 0
+                
+                ; 1st Year / 2nd Sem 
+                firstYear2     db 10, 10, 9, "1st Year | 2nd Sem", 10, 0
+                F12     db 9, "NO.", 9, "Title", 9,9,   "Unit",9,9,   "Description", 10, 0
+                it1    db 9, "[I]", 9, "IT 1", 9,9,  "3.0", 9,9,   "PLATFORM TECHNOLOGIES", 10, 0
+                ge15     db 9, "[J]", 9, "GE 15", 9,9,  "3.0", 9,9,   "ENVIRONMENTAL SCIENCE", 10, 0
+                nstp2     db 9, "[K]", 9, "NSTP 2", 9,9,  "3.0", 9,9,   "NATIONAL SERVICE TRAINING PROGRAM 2", 10, 0
+                ge4     db 9, "[L]", 9, "GE 4", 9,9,   "3.0", 9,9,   "MATHEMATICS IN THE MORDERN WORLD", 10, 0
+                cce103   db 9, "[M]", 9, "CCE 103", 9,9, "3.0", 9,9,   "COMPUTER PROGRAMMING 2", 10, 0
+                uge1    db 9, "[N]", 9, "UGE 1", 9,9, "6.0", 9,9,   "READING COMPREHENSION", 10, 0
+                gpe2     db 9, "[O]", 9, "GPE 2", 9,9,  "2.0", 9,9,   "FITNESS EXERCISES", 10, 0
+                it2     db 9, "[P]", 9, "IT 2", 9,9,  "3.0", 9,9,   "DISCRETE MATHEMATICS", 10, 0
+                        U122    db 9, "-----------------------------------------------------------------------------------------", 0
+                
 
-        ; 2nd Year / 1st Sem 
-        secondYear1     db 10, 10, 9, "2nd Year | 1st Sem", 10, 0
-        S21    db 9, "NO.", 9, "Title", 9,9,   "Unit",9,9,   "Description", 10, 0
-        it5     db 9, "[A]", 9, "IT 5", 9,9,    "3.0", 9,9,   "IT ELECTIVE 2", 10, 0
-        cce104     db 9, "[B]", 9, "CCE 104", 9,9,  "3.0", 9,9,   "INFORMATION MANAGEMENT", 10, 0
-        it3     db 9, "[C]", 9, "IT 3", 9,9,  "3.0", 9,9,   "NETWORKING 1", 10, 0
-        it4     db 9, "[D]", 9, "IT 4", 9,9, "3.0", 9,9,   "CALCULUS 1", 10, 0
-        gpe3     db 9, "[E]", 9, "GPE 3", 9,9,   "2.0", 9,9,   "PHYSICAL ACITIVITIES TOWARDS HEALTH AND FITNESS", 10, 0
-        ge3    db 9, "[F]", 9, "GE 3", 9,9, "3.0", 9,9,   "THE CONTEMPORARY WORLD", 10, 0
-        cce105     db 9, "[G]", 9, "CCE 105", 9,9, "3.0", 9,9,   "DATA STRUCTURES AND ALGORITHMS", 10, 0
-        ge20     db 9, "[H]", 9, "GE 20", 9,9, "3.0", 9,9,   "READING VISUAL ARTS", 10, 0 
-		E2111	db 9, "-----------------------------------------------------------------------------------------", 0
+                ; 2nd Year / 1st Sem 
+                secondYear1     db 10, 10, 9, "2nd Year | 1st Sem", 10, 0
+                S21    db 9, "NO.", 9, "Title", 9,9,   "Unit",9,9,   "Description", 10, 0
+                it5     db 9, "[A]", 9, "IT 5", 9,9,    "3.0", 9,9,   "IT ELECTIVE 2", 10, 0
+                cce104     db 9, "[B]", 9, "CCE 104", 9,9,  "3.0", 9,9,   "INFORMATION MANAGEMENT", 10, 0
+                it3     db 9, "[C]", 9, "IT 3", 9,9,  "3.0", 9,9,   "NETWORKING 1", 10, 0
+                it4     db 9, "[D]", 9, "IT 4", 9,9, "3.0", 9,9,   "CALCULUS 1", 10, 0
+                gpe3     db 9, "[E]", 9, "GPE 3", 9,9,   "2.0", 9,9,   "PHYSICAL ACITIVITIES TOWARDS HEALTH AND FITNESS", 10, 0
+                ge3    db 9, "[F]", 9, "GE 3", 9,9, "3.0", 9,9,   "THE CONTEMPORARY WORLD", 10, 0
+                cce105     db 9, "[G]", 9, "CCE 105", 9,9, "3.0", 9,9,   "DATA STRUCTURES AND ALGORITHMS", 10, 0
+                ge20     db 9, "[H]", 9, "GE 20", 9,9, "3.0", 9,9,   "READING VISUAL ARTS", 10, 0 
+                        E2111	db 9, "-----------------------------------------------------------------------------------------", 0
 
-        ; 2nd Year / 2nd Sem 
-        secondYear2     db 10, 10, 9, "2nd Year | 2nd Sem", 10, 0
-        s22    db 9, "NO.", 9, "Title", 9,9,   "Unit",9,9,   "Description", 10, 0
-        it6     db 9, "[I]", 9, "IT 6", 9,9, "3.0", 9,9,   "FUNDAMENTALS OF DATABASE SYSTEMS", 10, 0
-        it8     db 9, "[J]", 9, "IT 8", 9,9,  "3.0", 9,9,   "CALCULUS 2", 10, 0
-        it10     db 9, "[K]", 9, "IT 10", 9,9,  "3.0", 9,9,   "IT ELECTIVE 3", 10, 0
-        it26     db 9, "[L]", 9, "IT 26", 9,9,    "6.0", 9,9,   "PROFESSIONAL TRACK FOR IT 3", 10, 0
-        mth103     db 9, "[M]", 9, "MTH 103", 9,9,   "3.0", 9,9,   "PROBABILITIES AND STATISTICS", 10, 0
-        gpe4    db 9, "[N]", 9, "GPE 4", 9,9, "2.0", 9,9,   "PHYSICAL ACTIVITIES TOWARDS HEALTH AND FITNESS", 10, 0
-        it7     db 9, "[O]", 9, "IT 7", 9,9, "3.0", 9,9,   "INTRODUCTION TO HUMAN COMPUTER INTERACTION", 10, 0
-		A222	db 9, "-----------------------------------------------------------------------------------------", 0
-        
+                ; 2nd Year / 2nd Sem 
+                secondYear2     db 10, 10, 9, "2nd Year | 2nd Sem", 10, 0
+                s22    db 9, "NO.", 9, "Title", 9,9,   "Unit",9,9,   "Description", 10, 0
+                it6     db 9, "[I]", 9, "IT 6", 9,9, "3.0", 9,9,   "FUNDAMENTALS OF DATABASE SYSTEMS", 10, 0
+                it8     db 9, "[J]", 9, "IT 8", 9,9,  "3.0", 9,9,   "CALCULUS 2", 10, 0
+                it10     db 9, "[K]", 9, "IT 10", 9,9,  "3.0", 9,9,   "IT ELECTIVE 3", 10, 0
+                it26     db 9, "[L]", 9, "IT 26", 9,9,    "6.0", 9,9,   "PROFESSIONAL TRACK FOR IT 3", 10, 0
+                mth103     db 9, "[M]", 9, "MTH 103", 9,9,   "3.0", 9,9,   "PROBABILITIES AND STATISTICS", 10, 0
+                gpe4    db 9, "[N]", 9, "GPE 4", 9,9, "2.0", 9,9,   "PHYSICAL ACTIVITIES TOWARDS HEALTH AND FITNESS", 10, 0
+                it7     db 9, "[O]", 9, "IT 7", 9,9, "3.0", 9,9,   "INTRODUCTION TO HUMAN COMPUTER INTERACTION", 10, 0
+                        A222	db 9, "-----------------------------------------------------------------------------------------", 0
+                
 
-        ; 3rd Year / 1st Sem
-        thirdYear     db 10, 10, 9, "3rd Year | 1st Sem", 10, 0
-        s23    db 9, "NO.", 9, "Title", 9,9,   "Unit",9,9,   "Description", 10, 0
-        it11     db 9, "[A]", 9, "IT 11", 9,9, "3.0", 9,9,   "NETWORKING 2", 10, 0
-        ge9     db 9, "[B]", 9, "GE 9", 9,9,  "3.0", 9,9,   "ETHICS (Disciplinal)", 10, 0
-        ge8     db 9, "[C]", 9, "GE 8", 9,9,  "3.0", 9,9,   "READING IN PHILIPPINE HISTORY", 10, 0
-        phys101  db 9, "[D]", 9, "PHYS 101" ,9, "4.0", 9,9,   "COLLEGE PHYSICS 1", 10, 0
-        it12     db 9, "[E]", 9, "IT 12", 9,9,   "3.0", 9,9,   "SYSTEM INTEGRATION & ARCHITECTURE", 10, 0
-        it14    db 9, "[F]", 9, "IT 14", 9,9, "3.0", 9,9,   "PROFESSIONAL TRACK FOR IT 5", 10, 0
-        ge11     db 9, "[G]", 9, "GE 11", 9,9, "3.0", 9,9,   "THE ENTREPRENEURIAL MIND", 10, 0
-        it13     db 9, "[H]", 9, "IT 13", 9,9, "3.0", 9,9,   "PROFESSIONAL TRACK FOR IT 4", 10, 0
+                ; 3rd Year / 1st Sem
+                thirdYear     db 10, 10, 9, "3rd Year | 1st Sem", 10, 0
+                s23    db 9, "NO.", 9, "Title", 9,9,   "Unit",9,9,   "Description", 10, 0
+                it11     db 9, "[A]", 9, "IT 11", 9,9, "3.0", 9,9,   "NETWORKING 2", 10, 0
+                ge9     db 9, "[B]", 9, "GE 9", 9,9,  "3.0", 9,9,   "ETHICS (Disciplinal)", 10, 0
+                ge8     db 9, "[C]", 9, "GE 8", 9,9,  "3.0", 9,9,   "READING IN PHILIPPINE HISTORY", 10, 0
+                phys101  db 9, "[D]", 9, "PHYS 101" ,9, "4.0", 9,9,   "COLLEGE PHYSICS 1", 10, 0
+                it12     db 9, "[E]", 9, "IT 12", 9,9,   "3.0", 9,9,   "SYSTEM INTEGRATION & ARCHITECTURE", 10, 0
+                it14    db 9, "[F]", 9, "IT 14", 9,9, "3.0", 9,9,   "PROFESSIONAL TRACK FOR IT 5", 10, 0
+                ge11     db 9, "[G]", 9, "GE 11", 9,9, "3.0", 9,9,   "THE ENTREPRENEURIAL MIND", 10, 0
+                it13     db 9, "[H]", 9, "IT 13", 9,9, "3.0", 9,9,   "PROFESSIONAL TRACK FOR IT 4", 10, 0
 
-        ; 3rd Year / 2nd Sem
-        thirdYear2     db 10, 10, 9, "3rd Year | 2nd Sem", 10, 0
-        s24    db 9, "NO.", 9, "Title", 9,9,   "Unit",9,9,   "Description", 10, 0
-        it16     db 9, "[I]", 9, "IT 16", 9,9, "3.0", 9,9,   "INFORMATION ASSURANCE AND SECURITY 1", 10, 0
-        uge2     db 9, "[J]", 9, "UGE 2", 9,9,  "3.0", 9,9,   "TECHNICAL WRITING IN THE DISCIPLINE", 10, 0
-        it15     db 9, "[K]", 9, "IT 15", 9,9,  "3.0", 9,9,   "INTEGRATIVE PROGRAMMING AND TECHNOLOGIES", 10, 0
-        it18     db 9, "[L]", 9, "IT 18", 9,9,    "3.0", 9,9,   "QUANTITATIVE METHODS", 10, 0
-        it19     db 9, "[M]", 9, "IT 19", 9,9,   "3.0", 9,9,   "TECHNOPRENEURSHIP", 10, 0
-        it20    db 9, "[N]", 9, "IT 20", 9,9, "3.0", 9,9,   "PROFESSIONAL TRACK FOR IT 6", 10, 0
-        phys102  db 9, "[O]", 9, "PHYS 102" ,9, "4.0", 9,9,   "COLLEGE PHYSICS 2", 10, 0
-        ge7     db 9, "[P]", 9, "GE 7", 9,9, "3.0", 9,9,   "ART APPRECIATION", 10, 0
+                ; 3rd Year / 2nd Sem
+                thirdYear2     db 10, 10, 9, "3rd Year | 2nd Sem", 10, 0
+                s24    db 9, "NO.", 9, "Title", 9,9,   "Unit",9,9,   "Description", 10, 0
+                it16     db 9, "[I]", 9, "IT 16", 9,9, "3.0", 9,9,   "INFORMATION ASSURANCE AND SECURITY 1", 10, 0
+                uge2     db 9, "[J]", 9, "UGE 2", 9,9,  "3.0", 9,9,   "TECHNICAL WRITING IN THE DISCIPLINE", 10, 0
+                it15     db 9, "[K]", 9, "IT 15", 9,9,  "3.0", 9,9,   "INTEGRATIVE PROGRAMMING AND TECHNOLOGIES", 10, 0
+                it18     db 9, "[L]", 9, "IT 18", 9,9,    "3.0", 9,9,   "QUANTITATIVE METHODS", 10, 0
+                it19     db 9, "[M]", 9, "IT 19", 9,9,   "3.0", 9,9,   "TECHNOPRENEURSHIP", 10, 0
+                it20    db 9, "[N]", 9, "IT 20", 9,9, "3.0", 9,9,   "PROFESSIONAL TRACK FOR IT 6", 10, 0
+                phys102  db 9, "[O]", 9, "PHYS 102" ,9, "4.0", 9,9,   "COLLEGE PHYSICS 2", 10, 0
+                ge7     db 9, "[P]", 9, "GE 7", 9,9, "3.0", 9,9,   "ART APPRECIATION", 10, 0
 
 
-        ; 3rd Year / Summer
-        thirdYear3     db 10, 10, 9, "3rd Year | Summer", 10, 0
-        s25    db 9, "NO.", 9, "Title", 9,9,   "Unit",9,9,   "Description", 10, 0
-        it22     db 9, "[Q]", 9, "IT 22", 9,9, "3.0", 9,9,   "CAPSTONE PROJECT 1", 10, 0
-        it21     db 9, "[R]", 9, "IT 21", 9,9,  "3.0", 9,9,   "INFORMATION ASSURANCE AND SECURITY 2", 10, 0
-        
-        ; 4th Year / 1st Sem
-        fourthYear1     db 10, 10, 9, "4th Year | 1st Sem", 10, 0
-        s26    db 9, "NO.", 9, "Title", 9,9,   "Unit",9,9,   "Description", 10, 0
-        cce106     db 9, "[A]", 9, "CCE 106", 9,9, "3.0", 9,9,   "APPLICATIONS DEV'T AND EMERGING TECHNOLOGIES", 10, 0
-        it24     db 9, "[B]", 9, "IT 24", 9,9,  "6.0", 9,9,   "CAPSTONE PROJECT 2", 10, 0
-        caed500c     db 9, "[C]", 9, "CAED 500C", 9,  "3.0", 9,9,   "CAREER AND PERSONALITY DEVELOPMENT", 10, 0
-        it17     db 9, "[D]", 9, "IT 17", 9,9,  "3.0", 9,9,   "SOCIAL AND PROFESSIONAL ISSUES", 10, 0
-        it23     db 9, "[E]", 9, "IT 23", 9,9,  "3.0", 9,9,   "SYSTEMS ADMINISTRATON AND MAINTENANCE", 10, 0
-        
-        ; 4th Year / 2nd Sem
-        fourthYear2     db 10, 10, 9, "4th Year | 2nd Sem", 10, 0
-        s27    db 9, "NO.", 9, "Title", 9,9,   "Unit",9,9,   "Description", 10, 0
-        it25     db 9, "[F]", 9, "IT 25", 9,9, "9.0", 9,9,   "PRACTICUM", 10, 0
+                ; 3rd Year / Summer
+                thirdYear3     db 10, 10, 9, "3rd Year | Summer", 10, 0
+                s25    db 9, "NO.", 9, "Title", 9,9,   "Unit",9,9,   "Description", 10, 0
+                it22     db 9, "[Q]", 9, "IT 22", 9,9, "3.0", 9,9,   "CAPSTONE PROJECT 1", 10, 0
+                it21     db 9, "[R]", 9, "IT 21", 9,9,  "3.0", 9,9,   "INFORMATION ASSURANCE AND SECURITY 2", 10, 0
+                
+                ; 4th Year / 1st Sem
+                fourthYear1     db 10, 10, 9, "4th Year | 1st Sem", 10, 0
+                s26    db 9, "NO.", 9, "Title", 9,9,   "Unit",9,9,   "Description", 10, 0
+                cce106     db 9, "[A]", 9, "CCE 106", 9,9, "3.0", 9,9,   "APPLICATIONS DEV'T AND EMERGING TECHNOLOGIES", 10, 0
+                it24     db 9, "[B]", 9, "IT 24", 9,9,  "6.0", 9,9,   "CAPSTONE PROJECT 2", 10, 0
+                caed500c     db 9, "[C]", 9, "CAED 500C", 9,  "3.0", 9,9,   "CAREER AND PERSONALITY DEVELOPMENT", 10, 0
+                it17     db 9, "[D]", 9, "IT 17", 9,9,  "3.0", 9,9,   "SOCIAL AND PROFESSIONAL ISSUES", 10, 0
+                it23     db 9, "[E]", 9, "IT 23", 9,9,  "3.0", 9,9,   "SYSTEMS ADMINISTRATON AND MAINTENANCE", 10, 0
+                
+                ; 4th Year / 2nd Sem
+                fourthYear2     db 10, 10, 9, "4th Year | 2nd Sem", 10, 0
+                s27    db 9, "NO.", 9, "Title", 9,9,   "Unit",9,9,   "Description", 10, 0
+                it25     db 9, "[F]", 9, "IT 25", 9,9, "9.0", 9,9,   "PRACTICUM", 10, 0
 
-        one db 10, 10, 9, "[1] - 1st Year & 1st Sem", 10, 0
-        two db 9, "[2] - 1st Year & 2nd Sem", 10, 0 
-        three db 9, "[3] - 2nd Year & 1st Sem", 10, 0 
-        four db 9, "[4] - 2nd Year & 2nd Sem", 10, 0
-        five db 9, "[5] - 3rd Year & 1st Sem", 10, 0
-        six db 9, "[6] - 3rd Year & 2nd Sem", 10, 0
-        seven db 9, "[7] - 3rd Year & Summer", 10, 0
-        eight db 9, "[8] - 4th Year & 1st Sem", 10, 0
-        nine db 9, "[9] - 4th Year & 2nd Sem", 10, 0
+                one db 10, 10, 9, "[1] - 1st Year & 1st Sem", 10, 0
+                two db 9, "[2] - 1st Year & 2nd Sem", 10, 0 
+                three db 9, "[3] - 2nd Year & 1st Sem", 10, 0 
+                four db 9, "[4] - 2nd Year & 2nd Sem", 10, 0
+                five db 9, "[5] - 3rd Year & 1st Sem", 10, 0
+                six db 9, "[6] - 3rd Year & 2nd Sem", 10, 0
+                seven db 9, "[7] - 3rd Year & Summer", 10, 0
+                eight db 9, "[8] - 4th Year & 1st Sem", 10, 0
+                nine db 9, "[9] - 4th Year & 2nd Sem", 10, 0
 
-        select      db 10, 9, "Select Year and Semester: ", 0
-        enroll      db 10, 10, 9, "ENROLL SUBJECTS", 0 
-        invalid     db 9, "Invalid Input! Try Again.", 10, 0
-        totalUnits      db 10, 9, "Total Units: ", 0
-		
-		; Revision
-                WelcomeMessage db 10,9, "Hello GA! Welcome to UM - Student Portal",0
-		Name_Prompt db 10,9, "Enter your name: ",0
-                Name_Declared db 10,9, "Name: ",0
-                ID_Prompt db 9, "Enter Student ID Number: ",0
-                ID_Declared db 10,9, "Student ID Number: ", 0
+                select      db 10, 9, "Select Year and Semester: ", 0
+                enroll      db 10, 10, 9, "ENROLL SUBJECTS", 0 
+                invalid     db 9, "Invalid Input! Try Again.", 10, 0
+                totalUnits      db 10, 9, "Total Units: ", 0
+                        
+                        ; Revision
+                        WelcomeMessage db 10,9, "Hello GA! Welcome to UM - Student Portal",0
+                        Name_Prompt db 10,9, "Enter your name: ",0
+                        Name_Declared db 10,9, "Name: ",0
+                        ID_Prompt db 9, "Enter Student ID Number: ",0
+                        ID_Declared db 10,9, "Student ID Number: ", 0
 
-		; Print Revision
-		Sub_En db 10,10,9, "SUBJECTS ENROLLED:",0
-		print1 db 256 dup (0)
-		print2 db 256 dup (0)
-		print3 db 256 dup (0)
-		print4 db 256 dup (0)
-		print5 db 256 dup (0)
-		print6 db 256 dup (0)
-		print7 db 256 dup (0)
-		print8 db 256 dup (0)
-                print9 db 256 dup (0)
-		print10 db 256 dup (0)
-		print11 db 256 dup (0)
-		print12 db 256 dup (0)
-		print13 db 256 dup (0)
-		print14 db 256 dup (0)
-		print15 db 256 dup (0)
-		print16 db 256 dup (0)
-        
+                        ; Print Revision
+                        Sub_En db 10,10,9, "SUBJECTS ENROLLED:",0
+                        print1 db 256 dup (0)
+                        print2 db 256 dup (0)
+                        print3 db 256 dup (0)
+                        print4 db 256 dup (0)
+                        print5 db 256 dup (0)
+                        print6 db 256 dup (0)
+                        print7 db 256 dup (0)
+                        print8 db 256 dup (0)
+                        print9 db 256 dup (0)
+                        print10 db 256 dup (0)
+                        print11 db 256 dup (0)
+                        print12 db 256 dup (0)
+                        print13 db 256 dup (0)
+                        print14 db 256 dup (0)
+                        print15 db 256 dup (0)
+                        print16 db 256 dup (0)
+                
 
-        L7 DWORD ? 
-        E7 DWORD ? 
-        A7 DWORD ? 
-              
-        selectCourse_prompt    db 10, 9, "Select a course with their corresponding letter or any key to enroll", 10, 0
+                L7 DWORD ? 
+                E7 DWORD ? 
+                A7 DWORD ? 
+                
+                selectCourse_prompt    db 10, 9, "Select a course with their corresponding letter and press enter to enroll", 10, 0
 
-.data?
-        B9 db 50 dup (?)
-        E9 db 50 dup (?)
-		Name_Input db 20 dup(?)
-                ID_Input db 20 dup(?)
+        .data?
+                B9 db 50 dup (?)
+                E9 db 50 dup (?)
+                        Name_Input db 20 dup(?)
+                        ID_Input db 20 dup(?)
 .code   
 start:
         invoke ClearScreen
@@ -1056,6 +1056,8 @@ print3rd:
 		invoke StdOut, addr Divider
 		invoke StdOut, addr Name_Declared
 		invoke StdOut, addr Name_Input
+                invoke StdOut, addr ID_Declared
+                invoke StdOut, addr ID_Input
 		invoke StdOut, addr Sub_En
 		
 		;copy for Divider top
@@ -1207,6 +1209,8 @@ print3rd2:
 		invoke StdOut, addr Divider
 		invoke StdOut, addr Name_Declared
 		invoke StdOut, addr Name_Input
+                invoke StdOut, addr ID_Declared
+                invoke StdOut, addr ID_Input
 		invoke StdOut, addr Sub_En
 		
 		;copy for Divider top
@@ -1292,6 +1296,8 @@ print3rd3:
 		invoke StdOut, addr Divider
 		invoke StdOut, addr Name_Declared
 		invoke StdOut, addr Name_Input
+                invoke StdOut, addr ID_Declared
+                invoke StdOut, addr ID_Input
 		invoke StdOut, addr Sub_En
 		
 		;copy for Divider top
@@ -1405,6 +1411,8 @@ print4th:
 		invoke StdOut, addr Divider
 		invoke StdOut, addr Name_Declared
 		invoke StdOut, addr Name_Input
+                invoke StdOut, addr ID_Declared
+                invoke StdOut, addr ID_Input
 		invoke StdOut, addr Sub_En
 		
 		;copy for Divider top
@@ -1479,6 +1487,8 @@ print4th2:
 		invoke StdOut, addr Divider
 		invoke StdOut, addr Name_Declared
 		invoke StdOut, addr Name_Input
+                invoke StdOut, addr ID_Declared
+                invoke StdOut, addr ID_Input
 		invoke StdOut, addr Sub_En
 		
 		;copy for Divider top
